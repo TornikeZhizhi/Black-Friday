@@ -15,7 +15,7 @@ var clock;
 		        }
 		    });
 				    
-		    clock.setTime(220880);
+		    clock.setTime(1020880);
 		    clock.setCountdown(true);
 		    clock.start();
 
@@ -62,5 +62,59 @@ $(".main_navigation a").on("click",function(e){
 
 	$(".main_navigation a").removeClass("active");
 	$(this).addClass("active");
+
+})
+
+
+// resp menu
+
+
+$(document).ready(function(){
+
+	$(".navbar_icon").on("click",function(){
+
+		$(".responsive_navbar").addClass("active");
+
+		$(".responsive_navbar ul").fadeIn(600);
+
+	})
+
+	$(".close_icon_box").on("click",function(){
+
+		$(".responsive_navbar").removeClass("active");
+
+		$(".responsive_navbar ul").fadeOut(100);
+
+	})
+
+
+
+
+	$(".filer_content").on("click",function(){
+
+		$(".main_navigation_resp").addClass("active");
+
+		$(".main_navigation_resp ul").fadeIn(600);
+	})
+
+	$(".main_nav_close").on("click",function(){
+
+		$(".main_navigation_resp").removeClass("active");
+
+		$(".main_navigation_resp ul").fadeOut(600);
+
+	})
+
+
+
+
+$(".main_navigation_resp a").on("click",function(e){
+	e.preventDefault();
+	$(".main_navigation_resp").removeClass("active");
+
+})
+
+
+
 
 })

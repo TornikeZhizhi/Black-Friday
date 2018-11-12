@@ -139,10 +139,57 @@ a:hover {
           font-size: 16px;
           font-size: 1vw;
           color: #000000;
-          font-family: 'Conv_bebas-neue-bold';       }
+          font-family: 'Conv_bebas-neue-bold';    
+             }
     }
 }
 
+.resp_navigation {
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #E22033;
+    padding: 10px 60px;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 30px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+        ul {
+   
+          display: none;
+          width: 95%;
+
+
+       a {
+          font-size: 20px;
+          color: #fff;
+          font-family: 'Conv_bebas-neue-bold';    
+             }
+    }
+
+}
+
+
+.language_box_resp {
+  display: none;
+
+   span {
+      color: #fff;
+      display: inline-block;
+      position: relative;
+      font-family: 'Conv_bebas-neue-regular';
+      font-size: 22px;
+      cursor: pointer;
+      &:not(:last-child){
+        
+        margin-right: 10px;
+      }
+
+    }
+}
 
 .language_box {
     position: absolute;
@@ -214,7 +261,9 @@ a:hover {
 
 
 
-
+.main_navigation_resp {
+  display: none;
+}
 
 .datepciker {
   position: absolute;
@@ -296,6 +345,7 @@ a:hover {
   background-image: url(../images/main_bg.png);
   background-repeat: no-repeat;
   background-position: 6% 8%;
+  position: relative;
 
 }
 
@@ -317,6 +367,12 @@ a:hover {
     justify-content: space-between;
 
     }
+}
+
+.resp_top {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
 }
 
 
@@ -341,13 +397,18 @@ a:hover {
 
    }
 }
-
+.main_nav_close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: 10;
+}
 .content_sale_box {
 
   position: absolute;
   bottom: -10%;
   left: 7%;
-  z-index: 10;
+  z-index: 8;
   width: 85px;
   height: 85px;
   background-color: #E22033;
@@ -430,6 +491,51 @@ a:hover {
           }
        }
     }
+}
+
+.main_navigation_resp {
+ 
+    background-image:url("../images/main_nav_stars.png") ,linear-gradient(#000,#000);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 200;
+    width: 0%;
+    overflow: hidden;
+    transition: .4s;
+
+  
+
+
+    ul {
+           padding: 20px 20px 60px 30px;
+           display: none;
+
+       li {
+
+        height: 40px;
+        display: flex;
+        align-items: center;
+
+          a {
+            color: #E22033;
+            font-size: 22px;
+            font-family: 'Conv_bebas-neue-regular';
+            transition: .3s;
+
+            &.active {
+              color: #fff;
+            }
+
+            
+
+          }
+       }
+    }
+
+     &.active {
+      width: 70%;
+     }
 }
 
 
@@ -522,6 +628,9 @@ a:hover {
     animation: neon5 1s ease-in-out infinite alternate;
 }
 
+.main_content_responsive_tab {
+  display: none;
+}
 
 @-webkit-keyframes neon3 {
   from {
@@ -560,6 +669,51 @@ a:hover {
   }
 }
 
+
+.navbar_icon {
+  position: absolute;
+  z-index: 10;
+  top: 5%;
+  right: 5%;
+  display: none;
+}
+
+
+.responsive_navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 100%;
+  transition: .4s;
+  background-color: #E22033;
+  z-index: 1000;
+  display: none; 
+
+}
+
+
+.main_content_responsive_tab {
+
+
+
+  .filer_line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #E22033;
+  }
+
+  .filer_content {
+    display: flex;
+    align-items: center;
+        margin-right: 3%;  }
+   h3 {
+    color: #E22033;
+    font-family: 'Conv_bebas-neue-regular';
+    font-size: 20px;
+   }
+}
 
 
 
@@ -625,3 +779,212 @@ a:hover {
 
 
 
+@media only screen and (max-width: 992px){
+  .main_content_responsive_tab {
+
+  display: flex;
+}
+  .top_nav {
+        display: none;
+  }
+  .top_left_scroll_box {
+    display: none;
+  }
+
+  .main_tittle h1 span:first-child:after {
+    content: unset;
+  }
+  .main_tittle {
+    left: 50%;
+}
+
+.top_email_box {
+   
+    left: 5%;
+    top: 5%;
+    height: 10%;
+    width: 40%;
+
+}
+.top_email_box span {
+  display: block;
+
+}
+.language_box {
+    
+    left: 7%;
+    top: 6%; 
+    display: none;
+
+    &.active {
+      display: block;
+      opacity: 1;
+    }
+}
+
+.navbar_icon {
+  display: block;
+}
+.language_box_resp {
+  display: block;
+}
+.responsive_navbar {
+  display: block;
+      overflow: hidden;
+
+   &.active {
+    width: 100%;
+   }
+}
+
+.main_tittle h1 span:first-child,.main_tittle h1 span:last-child {
+ 
+    font-size: 90px;
+    
+}
+.footer .footer_content_up {
+ 
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_links {
+  order: -1;
+}
+.footer .footer_content_up > div:not(:last-child) {
+     margin-right: unset; 
+}
+.footer_copyright {
+  margin-top: 0;
+}
+.main_info .main_info_text p {
+    font-size: 12px;
+   
+}
+
+.main_info .main_info_text {
+ 
+    margin: 25px auto 0;
+}
+
+.main_info .main_info_tittle h2 {
+
+    font-size: 30px;
+}
+
+.main_right_nav {
+  display: none;
+}
+
+.contents {
+    width: 50%;
+   
+}
+.main_content_box {
+    width: 100%;
+    margin-left: unset; 
+    padding: 80px 0 50px;
+    justify-content: center;
+}
+
+.contents img {
+    height: 37px;
+    object-fit: cover;
+    width: 69px;
+}
+.main_info {
+    padding: 30px 0 80px;
+}
+.content_sale_box {
+  
+    width: 60px;
+    height: 60px;
+    bottom: 4%;
+    left: 9%;
+ 
+}
+.content_sale_box span {
+  
+    font-size: 18px;
+ 
+}
+
+.main_content_box .main_contents {
+    width: 85%;
+}
+.main_content_responsive_tab {
+  display: flex;
+  align-items: center;
+}
+
+.main_navigation_resp {
+  display: block;
+}
+
+}
+
+
+
+@media only screen and (max-width: 576px) {
+.main_tittle h1 span:first-child {
+ 
+    line-height: 58px;
+}
+.main_tittle h1 span:first-child, .main_tittle h1 span:last-child {
+    font-size: 65px;
+}
+.top_email_box span {
+ 
+    font-size: 14px;
+ 
+}
+.main_tittle {
+    
+    top: 40%;
+ 
+}
+.datepciker {
+    top: 58%;
+}
+
+.flip-clock-wrapper ul li a div div.inn {
+
+    font-size: 20px;
+}
+.flip-clock-wrapper ul {
+  width: 27px;
+  height: 50px;
+}
+.flip-clock-divider .flip-clock-label {
+    top: -1.5em;
+    right: -49px;
+}
+.flip-clock-divider {
+
+    height: 100px;
+}
+.resp_navigation ul a {
+    font-size: 16px;
+    
+}
+
+.content_sale_box {
+  
+    width: 40px;
+    height:40px;
+        bottom: 14%;
+    left: 10%;
+ 
+}
+.content_sale_box span {
+  
+    font-size: 14px;
+ 
+}
+
+.contents {
+  margin-bottom: 0px;
+}
+
+
+}
