@@ -780,6 +780,25 @@ a:hover {
 
 
 @media only screen and (max-width: 992px){
+
+  .main_navigation_resp ul li {
+     height: unset; 
+     margin-bottom: 5px;
+}
+  .main_navigation_resp ul {
+   
+     height: 430px;
+}
+
+
+
+.main_navigation_resp ul li a {
+   
+    font-size: 16px;
+   
+}
+
+
   .main_content_responsive_tab {
 
   display: flex;
